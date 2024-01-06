@@ -1,7 +1,7 @@
 ﻿using SpecflowProject1.Drivers;
 using OpenQA.Selenium;
 
-namespace SpecflowProject1.Pages.HomePage.Components.ManageListings
+namespace SpecFlowProject1.Drivers
 {
     public class IfBlock : CommonDriver
     {
