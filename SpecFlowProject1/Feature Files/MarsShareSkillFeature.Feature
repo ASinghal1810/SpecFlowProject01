@@ -1,6 +1,7 @@
 ﻿﻿Feature: MarsShareSkillFeature
 
 As a Exsting User
+
 I would like to sign in to the Mars
 So that I can share my skill
 

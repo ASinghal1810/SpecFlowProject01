@@ -28,7 +28,7 @@ namespace SpecFlowProject1.FeatureFiles
         
         private static string[] featureTags = ((string[])(null));
         
-#line 1 "SearchSkillFeature.Feature"
+#line 1 "MarsSearchSkillsFeature.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
