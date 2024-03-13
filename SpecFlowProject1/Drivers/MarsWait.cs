@@ -1,5 +1,6 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
+using SpecFlowProject1.Drivers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,11 +10,11 @@ using System.Threading.Tasks;
 namespace SpecflowProject1.Drivers
 {
 
-    public class MarsWait : CommonDriver
+    public class MarsWait : MarsHook
     {
-        public static void WaitToBeClickable(string LocatorType, int seconds, string LocatorValue)
+        public static void MarsWaitToBeClickable(string LocatorType, int seconds, string LocatorValue)
         {
-            var wait = new WebDriverWait(driver, new TimeSpan(0, 0, seconds));
+            var wait = new WebDriverWait(marsDriver, new TimeSpan(0, 0, seconds));
             if (LocatorType == "XPath")
             {
                 wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.XPath(LocatorValue)));
@@ -34,9 +35,9 @@ namespace SpecflowProject1.Drivers
 
             }
         }
-        public static void WaitToBeVisible(string LocatorType, int seconds, string LocatorValue)
+        public static void MarsWaitToBeVisible(string LocatorType, int seconds, string LocatorValue)
         {
-            var wait = new WebDriverWait(driver, new TimeSpan(0, 0, seconds));
+            var wait = new WebDriverWait(marsDriver, new TimeSpan(0, 0, seconds));
 
             if (LocatorType == "XPath")
             {

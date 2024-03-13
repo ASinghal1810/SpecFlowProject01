@@ -1,28 +1,28 @@
-﻿Feature: Certification Feature
+﻿﻿Feature: MarsSearchSkillsFeature
 
-
-A short summary of the feature
+As a Exsting User
+I would like to sign in to the Mars
+So that I can search skills by using filter
 
 @tag1
-Scenario Outline: Certification Addition
-	Given I logged into portal successfully to add certificate
-	When User enters a Certificate '<Certificate>' , Institution '<Institution>' & Year '<Year>'
-	And Clicks on add button
-	Then '<Certificate>' is added successfully
-	Examples: 
-	| Certificate         | Institution | Year  |
-	| ISTQB Certification | Institution | 2014 |
-     
+Scenario Outline: Search skill by using online option filter
+Given I logged into the Mars portal by using valid credentials
+When I go to the home page by click the Mars Logo
+And I insert '<SkillName1>' into the search bar and select the online option
+Then I click into the first listing
+And I should see the location type is showing online option
 
-Scenario Outline: Certification Edit
-	Given I logged into portal successfully to edit certification
-	When User enters a Certificate '<Certificate>' , Institution '<Institution>' & Year '<Year>' 
-	And Clicks on update button
-	Then '<Certificate>' is edited successfull
-	| Certificate | Institution | Year |
-	| ISTQB Cert  | Institute   | 2015 |
+Examples: 
+| SkillName1 |
+| Music      |
 
-Scenario: Certification Deletion
-	Given I logged into portal successfully to delete certification
-	When Clicks on x icon
-	Then Certification is deleted successfully
+Scenario Outline: Search skill by using on-site option filter
+Given I logged into the Mars portal by using valid credentials
+When I go to the home page by click the Mars Logo
+And I insert '<SkillName2>' into the search bar and select the on-site option
+Then I click into the first listing
+And I should see the location type is showing on-site option
+
+Examples: 
+| SkillName2    |
+| Business      |
